@@ -35,11 +35,10 @@ def sendToAPI(value):
     req = requests.post(
         apiUrl, headers={"Authorization": "Bearer " + token}, verify=False, json=data)
 
-    saveToFile(data)
-
     if (req.status_code == 200):
         return "Successfully sent data to API!"
     else:
+        saveToFile(data)
         return "Error sending data to the API! Status code: " + req.status_code
 
 
