@@ -1,7 +1,5 @@
 #!/usr/local/bin/python3 -tt
 
-import random
-import decimal
 import time
 from datetime import datetime
 import requests
